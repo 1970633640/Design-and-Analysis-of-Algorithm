@@ -123,3 +123,6 @@ dmypy.json
 .pyre/
 
 .idea
+*.exe
+*.o
+*.save
