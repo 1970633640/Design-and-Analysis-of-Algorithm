@@ -12,6 +12,7 @@ double f1(double x)
 {
     return x * x ;
 }
+
 double f2(double x)
 {
     return x * x * x ;
@@ -30,7 +31,7 @@ double s(double a, double b, double c, double d, int n, double (*f)(double))
         {
             hit++;
         }
-        else if(y < 0 && y >= (*f)(x))
+        else if(y < 0 && y >= (*f)(x)) //如果阴影在y轴下方记为负的面积
         {
             hit--;
         }
@@ -43,7 +44,7 @@ double s(double a, double b, double c, double d, int n, double (*f)(double))
     {
         s1 = d * (b - a);
     }
-    return s1 + s * double(hit) / double(n);
+    return s1 + s * double(hit) / double(n); //矩形abcd中的阴影面积还要要加上坐标轴和abcd之间的矩形面积
 }
 
 int main()
