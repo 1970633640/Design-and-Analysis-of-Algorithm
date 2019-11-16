@@ -26,4 +26,4 @@ while n <= 100000:
             X.append(i)
         total += math.fabs(SetCount(X) - n) / n
     print(n, total / n)
-    n = n * 5
+    n = n * 10
